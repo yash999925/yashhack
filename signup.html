@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Portal</title>
+	<link href="css/signup.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Nosifer' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Fredoka+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Tauri' rel='stylesheet' type='text/css'>
+
+<script type="text/javascript">
+
+function validate_pass(){
+
+	pass = document.getElementById("pass");
+	cpass = document.getElementById("confirm_pass");
+
+	if(pass.value != cpass.value){
+
+		document.getElementById("not_matching").style.visibility = "visible";
+		document.getElementById("pass").focus();
+	}else{
+
+		document.getElementById("not_matching").style.visibility = "hidden";
+	}
+}
+
+
+function clicked(){
+
+	username = document.getElementById("username");
+	pass = document.getElementById("pass");
+	confirm_pass = document.getElementById("confirm_pass");
+	phone = document.getElementById("phone");
+	usn = document.getElementById("usn");
+	
+	if(username.value != null && username.value != "" && usn.value != null && usn.value != "" && pass.value != null && pass.value != "" &&
+	confirm_pass != null && confirm_pass != "" && email.value != null && email.value != "" && phone.value != null && phone.value != "" ){
+
+		if(pass.value == confirm_pass.value){
+
+			document.signup_form.submit();
+	
+		}else{
+		
+			document.getElementById("matching").style.visibility = "visible";
+		}
+	}
+	else{
+	
+		document.getElementById("required_text").style.visibility = "visible";
+	}
+}
+
+</script>
+
+
+</head>
+<body >
+	<div id="test">
+		<div id="title">Project Portal</div>
+		<table id="menu_table" border="1">
+			<tr>
+				<td id="c1"><a href="index.html" id="home">Home</a></td>
+			</tr>
+		</table>	
+	</div>
+
+	
+		<div id="signup_text">Sign Up</div>
+		<form action="newuser.php" name="signup_form" method="POST">
+		<table id="table" border="0">
+			<tr>
+				<td id="col1">Name<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" placeholder="First Last" id="username" name="name"/></td>
+			</tr>
+			<tr>
+				<td id="col1">USN<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" placeholder="USN(Max 10 Characters)" maxlength="10" id="usn" name="usn"/></td>
+			</tr>
+			<tr>
+				<td id="col1">Password<sup id="required">*</sup></td>
+				<td id="col2"><input type="password" placeholder="Max 30 Characters" maxlength="30" id="pass" name="pass"/><div id="not_matching">Passwords not matching</div></td>
+			</tr>
+			<tr>
+				<td id="col1">Confirm Password<sup id="required">*</sup></td>
+				<td id="col2"><input type="password" placeholder="Max 30 Characters" 
+					maxlength="30" onblur="validate_pass()" id="confirm_pass" name="cpass"/></td>
+			</tr>
+			<tr>
+				<td id="col1">E-Mail ID<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" placeholder="name@example.com" id="email" name="email"/></td>
+			</tr>
+			<tr>
+				<td id="col1">Date of Birth</td>
+				<td id="col2"><input type="date" id="dob" name="dob"/></td>
+			</tr>
+			<tr>
+				<td id="col1">Gender</td>
+				<td id="col2"> 
+					<select name="gender" id="gender">
+						<option disabled="disabled" selected="selected">Select</option>
+						<option>Male</option>
+						<option>Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td id="col1">Mobile No<sup id="required">*</sup></td>
+				<td id="col2"><input type="text" id="phone" placeholder="+91"/></td>
+			</tr>
+			<tr>
+					<td id="col1"></td>
+					<td id="col2"><input type="button" value="Sign Up" id="signup_button"/></td>
+				</tr>
+		</table>
+		</form>
+		<div id="required_text">* Marked Details Required</div>
+	
+</body>
+
+
+</html>
