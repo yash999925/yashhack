@@ -15,5 +15,21 @@ Student Panel:
 Login Panel:
 1.	Encrypted/ decrypted username/password.
 
+Head of Department panel:
 
+1.Can see project details
+2.Approve project according to requirement
+3.Comment and feedback.
+
+Project in-charge:
+
+Can see project details
+1.Approve project according to requirement
+2.Comment and feedback
+
+Internal guide:
+
+Can see project details
+Approve project according to requirement
+Comment and feedback
 
