@@ -1,0 +1,16 @@
+Niranjan - Project pages of admin, student, others (admin_projects.php, student_projects.php, others_projects.php)
+
+Veda - Change password page and signup page(forgot_pass.php, signup.html)
+
+Soma - Search page of admin and student, manage users page in admin ( admin_search.php, student_search.php , admin_manage_users.php)
+
+Prashanth - Student upload page,  (student_upload.php, upload_file.php)
+
+Bindu - admin_source_request.php, admin_notifications.php
+
+Apurva - Login and associated error page (index.html , error.php)
+
+Nagashree - Student request pages (request.php, req.php)
+
+Sunil - Project Description pages, Integration and basic styling of all the web pages (project_description.php in admin, student and others)
+

@@ -1,0 +1,2 @@
+3. In upload_file.php, insert only when the project is not already there 
+4. While signing up, if the user alredy exists, alert him.
